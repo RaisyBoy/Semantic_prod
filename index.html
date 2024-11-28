@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Choose a Country</h1>
+        <div class="search-bar">
+            <input type="text" id="country-search" placeholder="Enter country name..." />
+            <button id="search-button">Find</button>
+        </div>
+        <div class="country-list">
+            <div class="country-card" data-country="Ukraine">Ukraine</div>
+            <div class="country-card" data-country="United States">United States</div>
+            <div class="country-card" data-country="Netherlands">Netherlands</div>
+        </div>
+    </div>
+    <script>
+        // Add click listeners to country cards
+        document.querySelectorAll('.country-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const country = card.getAttribute('data-country');
+                window.location.href = `universities.html?country=${encodeURIComponent(country)}`;
+            });
+        });
+
+        // Add event listener to search button
+        document.getElementById('search-button').addEventListener('click', () => {
+            const searchInput = document.getElementById('country-search').value.trim();
+            if (searchInput) {
+                window.location.href = `universities.html?country=${encodeURIComponent(searchInput)}`;
+            }
+        });
+
+        // Optional: Pressing Enter triggers the search
+        document.getElementById('country-search').addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                document.getElementById('search-button').click();
+            }
+        });
+    </script>
+</body>
+</html>

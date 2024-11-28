@@ -1,0 +1,366 @@
+/* Общие стили для страницы */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; /* Теплый светлый фон */
+    color: #333;
+}
+
+/* Стили для контейнера списка стран */
+.country-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Стили для карточки страны */
+.country-card {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 180px;
+}
+
+/* Эффект при наведении на карточку */
+.country-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.country-card:active {
+    transform: translateY(0);
+}
+
+/* Цветовая гамма для карточек стран */
+.country-card[data-country="Ukraine"] {
+    background-color: #A7C6ED; /* Мягкий голубой */
+    color: #fff;
+}
+
+.country-card[data-country="United States"] {
+    background-color: #7D9A94; /* Теплый серо-зеленый */
+    color: #fff;
+}
+
+.country-card[data-country="Netherlands"] {
+    background-color: #F6B29B; /* Легкий персиковый */
+    color: #fff;
+}
+
+/* Стили для заголовков в карточках стран */
+.country-card h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Стили для заголовка страницы */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 40px;
+    font-size: 2rem;
+}
+
+/* Стили для контейнера списка университетов */
+#university-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #fafafa; /* Легкий фон для университетов */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Стили для карточки университета */
+.university-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Эффект при наведении на карточку */
+.university-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Стили для содержимого карточки */
+.university-card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Стили для изображения университета */
+.university-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Стили для заголовка карточки */
+.university-card h3 {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+}
+
+/* Стили для текста в карточке */
+.university-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Фон для кнопки навигации */
+.university-card a {
+    text-decoration: none;
+    color: white;
+    background-color: #4a90e2;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Эффект при наведении на ссылку */
+.university-card a:hover {
+    background-color: #357ab7;
+}
+
+/* Стили для заголовка страницы */
+#country-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Базовые стили для ссылки */
+a {
+    text-decoration: none;
+}
+
+/* Стили для сообщения об ошибке при загрузке данных */
+#university-list p {
+    text-align: center;
+    font-size: 1rem;
+    color: #ff4d4f;
+    margin-top: 20px;
+}
+
+/* Адаптивные стили */
+@media screen and (max-width: 768px) {
+    /* Для списка стран */
+    .country-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .country-card {
+        width: 90%;
+        max-width: 320px;
+        margin-bottom: 20px;
+        height: 250px;
+    }
+
+    .country-card h2 {
+        font-size: 1.2rem;
+    }
+
+    /* Для списка университетов */
+    #university-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .university-card {
+        width: 100%;
+        max-width: 320px;
+        margin-bottom: 20px;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Стили для заголовка страницы */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 40px;
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Стили для блока с информацией об университете */
+.university-info-content {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Стили для изображения университета */
+.university-image-info {
+    width: 100%;
+    max-width: 600px; /* Максимальная ширина изображения */
+    height: auto; /* Поддержание пропорций */
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 30px; /* Увеличиваем отступ между картинкой и информацией */
+}
+
+/* Таблица для информации об университете */
+.university-info-table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Три колонки на одной строке */
+    gap: 20px; /* Расстояние между ячейками */
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Стили для строки таблицы */
+.info-row {
+    display: contents; /* Это нужно для работы с grid, чтобы строки корректно отображались */
+}
+
+/* Стили для ячеек таблицы */
+.info-cell {
+    background-color: #f9f9f9; /* Легкий фон для ячеек */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Стили для заголовков в ячейках */
+.info-cell strong {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .university-info-table {
+        grid-template-columns: 1fr 1fr; /* Для мобильных устройств — две колонки */
+    }
+
+    .university-image-info {
+        max-width: 90%; /* Изображение будет занимать 90% от ширины экрана */
+    }
+}
+
+/* Styles for the search bar */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 600px;
+    gap: 10px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #4a90e2;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #357ab7;
+}
+
+.search-bar button:active {
+    background-color: #2b6da3;
+}
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Лоадер-анимация */
+.loader {
+    border: 6px solid #e0e0e0; /* Серый цвет фона */
+    border-top: 6px solid #007bff; /* Синий цвет анимации */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+/* Анимация вращения */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
